@@ -48,6 +48,9 @@ python3 tools/fetch_snapshot.py --json duck.json # 另外存一份原始快照
 
 頁面不使用作者的任何圖檔，風格用 CSS 表現，不去打她的 R2 流量。
 
+**這一頁刻意不掛贊助 footer。** 在別人的作品頁上跟讀者要咖啡，位置不對。
+頁尾只留一行署名與 repo 連結。拿掉 snippet 之後整頁零 JavaScript。
+
 2026-09-18 公開。作者自己的完整攻略預告在 9/20 放市集留言區。
 
 ## 授權
