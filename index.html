@@ -11,125 +11,141 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.2.0/lxgwwenkaitc-regular.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.2.0/lxgwwenkaitc-bold.css">
 <style>
 :root{
-  --mud:#3A3124; --mud-deep:#262016; --mud-line:#544835;
-  --paper:#ECE0B4; --paper-edge:#DCCB95; --paper-warm:#E2D4A2;
-  --ink:#463A26; --ink-soft:#7A6A4B;
-  --bone:#E6DEC8; --bone-soft:#A79D84;
-  --coin:#EE6FA6; --duck:#F0B93C;
-  --measure:38rem;
+  --page:#FFFFFF; --wash:#FFF6FA;
+  --pink:#FFCBDD; --pink-pale:#FAE1E9; --pink-line:#FF8FBA; --pink-ink:#C43A72;
+  --sage:#829367; --sage-deep:#57634E;
+  --ink:#2E2A28; --ink-soft:#6B6560;
+  --sun:#EE9F13;
+  --measure:36rem;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0; background:var(--mud); color:var(--bone);
+  margin:0; background:var(--page); color:var(--ink);
   font-family:"Noto Serif TC",serif; font-weight:400;
-  font-size:17px; line-height:1.85; letter-spacing:.01em;
+  font-size:17px; line-height:1.9; letter-spacing:.01em;
 }
 .kai{font-family:"LXGW WenKai TC","Kaiti TC","BiauKai","標楷體",serif}
 .wrap{max-width:74rem; margin:0 auto; padding:0 1rem}
-a{color:var(--duck); text-underline-offset:.25em; text-decoration-thickness:1px}
-a:hover{color:var(--coin)}
-:focus-visible{outline:2px solid var(--coin); outline-offset:3px}
-h1,h2,h3{font-weight:900; line-height:1.3; letter-spacing:.02em; margin:0}
+a{color:var(--pink-ink); text-underline-offset:.25em; text-decoration-thickness:1px}
+a:hover{color:var(--sage-deep)}
+:focus-visible{outline:2.5px solid var(--pink-ink); outline-offset:3px}
+h1,h2,h3{font-family:"LXGW WenKai TC","Noto Serif TC",serif; font-weight:700; line-height:1.35; margin:0}
 p{margin:0 0 1.1em}
 p:last-child{margin-bottom:0}
 
-/* ── 開頭：最後一則日記 ───────────────────────── */
-.hero{padding:3.5rem 0 3rem; background:var(--mud-deep)}
-.slip-last{background:var(--paper); color:var(--ink); max-width:var(--measure);
-  padding:2.6rem 1.6rem .4rem; box-shadow:0 1.2rem 3rem rgba(0,0,0,.34)}
-.slip-last .d{display:block; font-size:.92rem; color:#7B6B4C; margin-bottom:.5rem}
-.slip-last .t{font-size:1.7rem; line-height:1.55; margin:0 0 1.4rem}
+.spoiler{background:var(--page); border-bottom:3px solid var(--ink); padding:1.7rem 0 2.1rem}
+.spoiler .wrap>*{max-width:var(--measure)}
+.spoiler .k{font-family:"LXGW WenKai TC",serif; font-weight:700; font-size:1.32rem; margin-bottom:.5rem}
+.spoiler p{font-size:.97rem; margin-bottom:.7em; color:var(--ink-soft)}
+.spoiler .k{color:var(--ink)}
+.spoiler .go{margin-top:.9rem}
+
+/* ── 開頭：她的粉紅天空，白紙從中間被撕開 ─────── */
+.hero{padding:3.5rem 0 3rem;
+  background:linear-gradient(180deg,#FFD4E6 0%,#FFE4EF 38%,#FFF4F8 72%,var(--page) 100%)}
+.slip-last{background:var(--page); max-width:var(--measure);
+  padding:2.6rem 1.7rem .4rem; box-shadow:0 .7rem 1.8rem rgba(196,58,114,.16)}
+.slip-last .d{display:block; font-size:.92rem; color:var(--pink-ink); margin-bottom:.5rem}
+.slip-last .t{font-size:1.8rem; line-height:1.55; margin:0 0 1.4rem}
 .tear{display:block; width:100%; height:20px; margin-top:-1px}
 .hero-after{max-width:var(--measure); margin-top:2.2rem}
-.hero-after .lede{font-size:1.06rem; color:var(--bone)}
-.hero-title{font-size:clamp(2rem,6.2vw,3.1rem); margin:.2rem 0 .9rem}
-.hero-meta{color:var(--bone-soft); font-size:.94rem; line-height:2}
-.hero-meta b{color:var(--bone); font-weight:600}
-.go{display:inline-block; margin-top:1.4rem; background:var(--coin); color:#2A1018;
-  font-weight:600; text-decoration:none; padding:.62rem 1.5rem}
-.go:hover{background:var(--duck); color:#2A1D08}
+.hero-after .lede{font-size:1.06rem}
+.hero-title{font-size:clamp(2.1rem,6.4vw,3.2rem); margin:.2rem 0 .9rem}
+.hero-meta{color:var(--ink-soft); font-size:.95rem; line-height:2}
+.hero-meta b{color:var(--ink); font-weight:700}
+.go{display:inline-block; margin-top:1.4rem; background:var(--pink); color:var(--ink);
+  font-weight:700; text-decoration:none; padding:.6rem 1.6rem;
+  border:2.5px solid var(--ink); border-radius:2rem; box-shadow:4px 4px 0 var(--ink)}
+.go:hover{color:var(--ink); background:#FFE0EB; transform:translate(2px,2px); box-shadow:2px 2px 0 var(--ink)}
 
 /* ── 目錄 ──────────────────────────────────── */
-.toc{border-top:1px solid var(--mud-line); border-bottom:1px solid var(--mud-line);
+.toc{border-top:2px dotted var(--pink); border-bottom:2px dotted var(--pink);
   padding:1.4rem 0; margin-top:3rem}
 .toc ol{margin:0; padding:0; list-style:none; display:grid; gap:.35rem 2rem}
-.toc a{color:var(--bone); text-decoration:none}
-.toc a:hover{color:var(--coin)}
-.toc .num{color:var(--coin); font-weight:600; margin-right:.6rem}
+.toc a{color:var(--ink); text-decoration:none}
+.toc a:hover{color:var(--pink-ink)}
+.toc .num{color:var(--pink-ink); font-weight:700; margin-right:.6rem}
 
 /* ── 一般段落 ─────────────────────────────── */
 section{padding:3.4rem 0}
-.sec-h{font-size:1.55rem; margin-bottom:1.4rem}
-.sec-h .num{color:var(--coin); margin-right:.7rem}
+main>section:nth-of-type(even){background:var(--wash)}
+main>section{position:relative}
+.sec-h{font-size:1.6rem; margin-bottom:.4rem; padding-bottom:.9rem;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 10'%3E%3Cpath d='M0,6 C10,1.5 20,10 30,6 C40,2 50,9.5 60,6 C70,2.5 80,10 90,6 C100,1.5 110,9.5 120,6' fill='none' stroke='%23FF8FBA' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:repeat-x; background-position:left bottom; background-size:120px 10px}
+.sec-h .num{color:var(--pink-ink); margin-right:.7rem}
 .prose{max-width:var(--measure)}
-.prose h3{font-size:1.1rem; margin:2rem 0 .6rem; color:var(--duck)}
+.prose h3{font-size:1.14rem; margin:2rem 0 .5rem; color:var(--sage-deep)}
+.sec-h{max-width:50rem}
 
 /* ── 人物 ─────────────────────────────────── */
-.cast{display:grid; gap:1.4rem; max-width:52rem; margin-top:.4rem}
-.cast div{border-left:2px solid var(--mud-line); padding-left:1.1rem}
-.cast div.key{border-left-color:var(--coin)}
-.cast b{display:block; font-weight:600; font-size:1.05rem}
-.cast span{color:var(--bone-soft); font-size:.9rem}
+.cast{display:grid; gap:1.4rem; max-width:50rem; margin-top:1.6rem}
+.cast div{border-left:3px solid var(--pink); padding-left:1.1rem}
+.cast div.key{border-left-color:var(--pink-ink)}
+.cast b{display:block; font-weight:700; font-size:1.06rem}
+.cast span{color:var(--sage); font-size:.9rem}
 .cast p{margin:.3rem 0 0}
 
-/* ── 日記 ─────────────────────────────────── */
+/* ── 日記：她的粉紙，撕口露出白頁 ──────────── */
 .diary{list-style:none; margin:0; padding:0}
 .e{display:grid}
-.slip{background:var(--paper); color:var(--ink); padding:.7rem 1.4rem}
+.slip{background:var(--pink-pale); padding:.7rem 1.4rem}
 .e:first-child .slip{padding-top:2rem}
 .e:last-child .slip{padding-bottom:1.6rem}
-.slip .d{display:block; font-size:.86rem; color:#84734F; letter-spacing:.06em}
-.slip p{margin:.1rem 0 0; font-size:1.12rem; line-height:1.9}
-.n{background:var(--paper-edge); color:#5C4E34; border-left:3px solid var(--coin);
-  padding:.9rem 1.4rem; font-size:.93rem; line-height:1.8}
+.slip .d{display:block; font-size:.86rem; color:var(--pink-ink); letter-spacing:.06em}
+.slip p{margin:.1rem 0 0; font-size:1.14rem; line-height:1.95}
+.n{background:#F3E6DC; color:var(--sage-deep); border-left:3px solid var(--pink-ink);
+  padding:.9rem 1.4rem; font-size:.94rem; line-height:1.8}
 .n p{margin:0 0 .6em}
 .diary-tear{display:block; width:100%; height:20px; margin-top:-1px}
 
 /* ── 證據 ─────────────────────────────────── */
-.ev{list-style:none; margin:1.2rem 0 0; padding:0; display:grid; gap:1.3rem; max-width:52rem}
-.ev li{border-left:2px solid var(--duck); padding-left:1.1rem}
-.ev q{display:block; font-size:1.04rem; color:var(--bone); quotes:"「" "」"}
-.ev cite{display:block; font-style:normal; color:var(--bone-soft); font-size:.88rem; margin-top:.35rem}
+.ev{list-style:none; margin:1.4rem 0 0; padding:0; display:grid; gap:1.3rem; max-width:50rem}
+.ev li{border-left:3px solid var(--sage); padding-left:1.1rem}
+.ev q{display:block; font-size:1.05rem; quotes:"「" "」"}
+.ev cite{display:block; font-style:normal; color:var(--sage); font-size:.88rem; margin-top:.35rem}
 
 /* ── 結局與攻略 ───────────────────────────── */
-.ends{list-style:none; margin:0; padding:0; display:grid; gap:1.6rem; max-width:52rem}
-.ends li{border-top:1px solid var(--mud-line); padding-top:1.1rem}
-.ends li.true{border-top-color:var(--coin)}
-.ends b{font-size:1.12rem; font-weight:600; display:block}
-.ends .cond{color:var(--bone-soft); font-size:.92rem; margin:.35rem 0 .5rem}
+.ends{list-style:none; margin:1.6rem 0 0; padding:0; display:grid; gap:1.6rem; max-width:50rem}
+.ends li{border-top:2px dotted var(--pink); padding-top:1.1rem}
+.ends li.true{border-top:2.5px solid var(--pink-ink)}
+.ends b{font-size:1.14rem; font-weight:700; display:block}
+.ends .cond{color:var(--sage-deep); font-size:.93rem; margin:.35rem 0 .5rem}
 .steps{counter-reset:s; list-style:none; margin:0; padding:0; max-width:var(--measure)}
-.steps li{counter-increment:s; position:relative; padding-left:2.6rem; margin-bottom:1.15rem}
-.steps li::before{content:counter(s); position:absolute; left:0; top:.1rem;
-  color:var(--coin); font-weight:600; font-size:.95rem}
-.warn{border-left:3px solid var(--coin); padding-left:1.1rem; margin:1.6rem 0 0; max-width:var(--measure); color:var(--bone)}
+.steps li{counter-increment:s; position:relative; padding-left:2.7rem; margin-bottom:1.15rem}
+.steps li::before{content:counter(s); position:absolute; left:0; top:.15rem;
+  color:var(--pink-ink); font-weight:700; font-size:.95rem;
+  font-family:"LXGW WenKai TC",serif}
+.warn{border-left:3px solid var(--pink-ink); padding-left:1.1rem; margin:1.8rem 0 0; max-width:var(--measure)}
 
 /* ── 表 ───────────────────────────────────── */
-table{border-collapse:collapse; width:100%; max-width:46rem; margin-top:.6rem; font-size:.96rem}
-caption{text-align:left; color:var(--bone-soft); font-size:.9rem; padding-bottom:.6rem}
-th,td{text-align:left; padding:.62rem .7rem; border-bottom:1px solid var(--mud-line); vertical-align:top}
-th{font-weight:600; color:var(--bone-soft)}
-td.v{white-space:nowrap; font-weight:600}
-td.plus{color:var(--duck)}
-td.minus{color:var(--coin)}
+table{border-collapse:collapse; width:100%; max-width:46rem; margin-top:.8rem; font-size:.96rem}
+caption{text-align:left; color:var(--sage); font-size:.9rem; padding-bottom:.6rem}
+th,td{text-align:left; padding:.62rem .7rem; border-bottom:1.5px solid var(--pink); vertical-align:top}
+th{font-weight:700; color:var(--sage-deep)}
+td.v{white-space:nowrap; font-weight:700}
+td.plus{color:var(--sage)}
+td.minus{color:var(--pink-ink)}
 tfoot td{border-bottom:none; padding-top:.9rem}
 
 /* ── 感想 ─────────────────────────────────── */
-.disclaim{border:1px solid var(--mud-line); padding:1rem 1.2rem; max-width:var(--measure);
-  color:var(--bone-soft); font-size:.93rem; margin-bottom:1.8rem}
+.disclaim{border:2.5px dotted var(--pink); padding:1rem 1.2rem; max-width:var(--measure);
+  color:var(--ink-soft); font-size:.94rem; margin:1.6rem 0 1.8rem}
 .take{max-width:var(--measure)}
-.take h3{font-size:1.08rem; color:var(--duck); margin:2rem 0 .5rem}
-
-.cta-end{border-top:1px solid var(--mud-line)}
-.cta-end .k{font-size:1.2rem; color:var(--bone); margin-bottom:.7rem}
-.cta-end .go{margin-top:.6rem}
+.take h3{font-size:1.1rem; color:var(--sage-deep); margin:2rem 0 .5rem}
 
 /* ── 收尾 ─────────────────────────────────── */
-.credits{background:var(--mud-deep)}
+.cta-end{background:linear-gradient(180deg,var(--page) 0%,#FFE4EF 100%)}
+.cta-end .k{font-size:1.24rem; margin-bottom:.7rem}
+.cta-end .go{margin-top:.6rem}
+.credits{background:var(--wash)}
 .credits .prose{max-width:46rem}
-.promo{border-top:1px solid var(--mud-line); padding:2rem 0 3rem; color:var(--bone-soft); font-size:.9rem}
+.promo{border-top:2px dotted var(--pink); padding:2rem 0 3rem;
+  color:var(--ink-soft); font-size:.9rem}
 .promo .links{display:flex; flex-wrap:wrap; gap:.4rem 1.7rem; margin:.8rem 0 0}
 
 @media (min-width:60rem){
@@ -138,15 +154,13 @@ tfoot td{border-bottom:none; padding-top:.9rem}
   .e{grid-template-columns:minmax(0,var(--measure)) 17rem; column-gap:2.4rem}
   .e>.n{align-self:start}
   .slip{padding-left:2.4rem; padding-right:2.4rem}
-  .n{background:none; color:var(--bone-soft); padding:.15rem 0 1.1rem 1.1rem;
-     font-size:.9rem; border-left-width:2px}
-  .diary-tear,.slip-last .tear{max-width:none}
-  .diary-wrap{max-width:calc(var(--measure) + 2.4rem + 17rem)}
+  .n{background:none; padding:.15rem 0 1.1rem 1.1rem; font-size:.92rem; border-left-width:2.5px}
   .tear-hold{max-width:var(--measure)}
 }
 @media (prefers-reduced-motion:no-preference){
   .slip-last{animation:settle .8s cubic-bezier(.2,.7,.3,1) both}
   @keyframes settle{from{transform:translateY(-10px) rotate(-.4deg); opacity:0}}
+  .go{transition:transform .12s, box-shadow .12s, background .12s}
 }
 </style>
 </head>
@@ -155,6 +169,16 @@ tfoot td{border-bottom:none; padding-top:.9rem}
 <path id="tearpath" d="M0,0 L0,6.6 L10.8,14.5 L24.5,15.4 L38.1,15.8 L59.4,12.4 L84.9,15.9 L95.7,16.9 L116.1,8.5 L137.4,9.1 L160.8,6.2 L174.4,16.4 L191.1,15.5 L212.1,4.7 L231.8,9.8 L252.8,11.9 L263.6,9.5 L282.0,6.7 L291.6,13.0 L301.6,12.8 L319.6,13.3 L337.2,14.0 L362.8,4.4 L379.8,3.8 L402.4,13.3 L412.1,15.8 L433.3,15.5 L450.2,17.8 L463.7,2.8 L481.7,13.5 L500.8,5.9 L514.7,8.0 L534.3,7.5 L554.9,14.3 L567.4,5.7 L590.7,12.7 L613.9,3.7 L636.4,14.5 L655.7,4.7 L667.3,7.7 L684.3,15.2 L698.3,16.5 L708.1,4.0 L729.8,11.4 L750.4,13.9 L768.9,2.7 L790.8,7.5 L801.9,9.1 L818.9,14.1 L833.7,11.1 L859.3,17.7 L869.7,1.9 L878.8,3.6 L888.2,10.5 L904.4,14.1 L925.3,15.2 L944.2,9.3 L959.3,6.8 L975.3,6.6 L991.5,11.1 L1007.5,5.4 L1022.8,2.0 L1042.2,15.1 L1062.7,2.2 L1082.7,12.6 L1093.2,3.2 L1103.8,16.8 L1113.2,10.2 L1134.8,2.8 L1154.3,15.2 L1167.4,10.9 L1185.0,15.4 L1200.0,8.0 L1200,0 Z"/>
 </defs></svg>
 
+<div class="spoiler">
+  <div class="wrap">
+    <p class="k">先說一句：這一頁從頭到尾都是雷。</p>
+    <p>《鴨子探索：是誰？》的故事、四個結局、完整攻略都寫在下面，
+    連第二章那本日記的四十一則也整本貼出來了。這份筆記是寫給玩過的人看的。</p>
+    <p>還沒玩過的話，先去玩一次再回來，一輪大概半小時，而且走錯路本來就是這款遊戲的內容。</p>
+    <a class="go" href="https://larch.ink/play/market/b1ce07d9-39f7-429b-8466-9ab6b3778c38">先去玩《鴨子探索：是誰？》</a>
+  </div>
+</div>
+
 <header class="hero">
   <div class="wrap">
     <div class="tear-hold">
@@ -162,7 +186,7 @@ tfoot td{border-bottom:none; padding-top:.9rem}
         <span class="d">［8月30日］</span>
         <p class="t">阿壹來找我了！</p>
       </div>
-      <svg class="tear" viewBox="0 0 1200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><use href="#tearpath" fill="var(--paper)"/></svg>
+      <svg class="tear" viewBox="0 0 1200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><use href="#tearpath" fill="var(--page)"/></svg>
     </div>
     <div class="hero-after">
       <p class="lede">日記到這裡為止。寫日記的人叫泥巴人，後來被村民埋在後山的土塊裡。</p>
@@ -170,7 +194,8 @@ tfoot td{border-bottom:none; padding-top:.9rem}
       <p class="hero-meta">
         這是一份收藏，也是一份重建。把《鴨子探索：是誰？》的故事講給沒玩過的人聽，
         再用主線裡散落的證據，把日記缺的部分拼回去。<br>
-        原作：<b>《鴨子探索：是誰？》</b>，作者<b>陳怡珊</b>，Larch 平台，第二屆創作者挑戰參賽作。
+        原作：<b><a href="https://larch.ink/play/market/b1ce07d9-39f7-429b-8466-9ab6b3778c38">《鴨子探索：是誰？》</a></b>，作者 <b><a href="https://larch.ink/@sssssssaaannnddra_pinkpie_duck">陳怡珊</a></b>，
+        Larch 平台，<a href="https://larch.ink/market?section=challenge&amp;challenge=creator-challenge-2026-09">第二屆創作者挑戰</a>參賽作。
       </p>
       <a class="go" href="https://larch.ink/play/market/b1ce07d9-39f7-429b-8466-9ab6b3778c38">先去玩原作</a>
     </div>
@@ -406,7 +431,7 @@ tfoot td{border-bottom:none; padding-top:.9rem}
     <div class="slip kai"><span class="d">［8月30日］　阿壹來找我了！</span><p></p></div>
     <aside class="n"><p>日記到這裡。感嘆號是他寫的。</p></aside>
   </li>  </ol>
-  <div class="tear-hold"><svg class="diary-tear" viewBox="0 0 1200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><use href="#tearpath" fill="var(--paper)"/></svg></div>
+  <div class="tear-hold"><svg class="diary-tear" viewBox="0 0 1200 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><use href="#tearpath" fill="var(--pink-pale)"/></svg></div>
   </div>
   <p class="prose kai" style="margin-top:1.4rem; color:var(--bone-soft)">剩下的日記似乎被撕掉了(?)</p>
 </section>
@@ -589,8 +614,11 @@ tfoot td{border-bottom:none; padding-top:.9rem}
 <section class="cta-end">
   <div class="prose">
     <p class="k">這一頁能寫出來，是因為有人先把它做出來。</p>
-    <p>《鴨子探索：是誰？》現在還在 Larch 市集上，免費，隨時可以玩。
-    作者陳怡珊的 IG 是 <a href="https://www.instagram.com/sssssssaaannnddra/">@sssssssaaannnddra</a>。</p>
+    <p>《鴨子探索：是誰？》現在還在 Larch 市集上，免費，隨時可以玩。</p>
+    <p>作者<a href="https://larch.ink/@sssssssaaannnddra_pinkpie_duck">陳怡珊</a>在 Larch 上還有另外兩部，都是鴨子兄妹的故事：
+    <a href="https://larch.ink/play/market/db8985a3-c4e9-4ee7-ae55-64d32a1497dd">《鴨子日常：懷舊篇》</a>與<a href="https://larch.ink/play/market/8bec6c45-ccca-4ae0-87b4-eb8dbdf8a3a5">《鴨子日常：鴨鴨旅遊大亨》</a>。
+    她自己說旅遊大亨要先玩過懷舊篇。她的 IG 是
+    <a href="https://www.instagram.com/sssssssaaannnddra/">@sssssssaaannnddra</a>。</p>
     <a class="go" href="https://larch.ink/play/market/b1ce07d9-39f7-429b-8466-9ab6b3778c38">到 Larch 玩《鴨子探索：是誰？》</a>
   </div>
 </section>
@@ -598,9 +626,9 @@ tfoot td{border-bottom:none; padding-top:.9rem}
 <section id="credits" class="credits">
   <div class="prose">
     <h2 class="sec-h"><span class="num">8</span>資料來源與授權</h2>
-    <p><b>原作</b>：《鴨子探索：是誰？》，作者陳怡珊，發表於 Larch 市集，第二屆創作者挑戰參賽作品。
-    作品頁：<a href="https://larch.ink/play/market/b1ce07d9-39f7-429b-8466-9ab6b3778c38">larch.ink</a>。
-    作者在遊戲結語裡留的 IG 是 @sssssssaaannnddra。</p>
+    <p><b>原作</b>：<a href="https://larch.ink/play/market/b1ce07d9-39f7-429b-8466-9ab6b3778c38">《鴨子探索：是誰？》</a>，作者 <a href="https://larch.ink/@sssssssaaannnddra_pinkpie_duck">陳怡珊</a>，
+    發表於 Larch 市集，<a href="https://larch.ink/market?section=challenge&amp;challenge=creator-challenge-2026-09">第二屆創作者挑戰</a>參賽作品。
+    作者在遊戲結語裡留的 IG 是 <a href="https://www.instagram.com/sssssssaaannnddra/">@sssssssaaannnddra</a>。</p>
     <p><b>資料怎麼來的</b>：這份筆記的內容全部出自作者已發佈的公開快照，
     用 <code>tools/fetch_snapshot.py</code> 讀 Larch 的市集端點取得，不需要登入，也沒有動到作者的專案。
     快照本身是作者的著作，本 repo 不收錄，請不要重新散布。</p>
